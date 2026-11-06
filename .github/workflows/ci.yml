@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.11', '3.12', '3.13']
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package with dev dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e '.[dev]'
+      - name: Run CLI and skill tests in isolated storage
+        shell: bash
+        run: |
+          mkdir -p .release-checks/home .release-checks/tmp
+          export HOME="$PWD/.release-checks/home"
+          export TMPDIR="$PWD/.release-checks/tmp"
+          export PYTHONDONTWRITEBYTECODE=1
+          unset REPO_SCOUT_RUNS_ROOT REPO_SCOUT_CAMPAIGN_HOME
+          unset REPO_SCOUT_EXCLUDE_PATTERN REPO_SCOUT_INDEX
+          pytest -q
+          for test in skills/repo-scout/scripts/test_*.py; do
+            python "$test" || exit 1
+          done
+          python skills/repo-scout/scripts/init_repo_scout_campaign.py --self-test
+          python skills/repo-scout/scripts/verify_repo_scout_campaign.py --self-test
+      - name: Smoke CLI
+        run: |
+          repo-scout --help
+          repo-scout doctor
+          repo-scout scanners list

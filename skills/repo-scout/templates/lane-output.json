@@ -1,0 +1,13 @@
+{
+  "schema_version": "repo-scout.lane-output.v1",
+  "lane_id": "provenance_activity",
+  "status": "hold",
+  "output_path": "/path/to/campaign/repos/example_project/lanes/provenance_activity.json",
+  "sources_used": ["https://github.com/example/project"],
+  "source_classes": ["external_source_evidence", "fit_routing"],
+  "forbidden_actions_observed": ["no target repo code execution; scaffold only"],
+  "evidence_refs": [],
+  "gaps": ["lane not yet executed"],
+  "findings": {},
+  "repo_scout_skill_context": {"campaign_id": "example-campaign", "repo_slug": "example_project", "mode": "standard"}
+}

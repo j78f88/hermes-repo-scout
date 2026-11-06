@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "repo-scout.lane-output.v1",
+  "title": "Repo Scout lane output",
+  "description": "Rules enforced by run_repo_scout.py lint. Evidence refs use file.json#/json-pointer relative to the campaign root.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "lane_id",
+    "status",
+    "evidence_refs",
+    "findings",
+    "forbidden_actions_observed"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "repo-scout.lane-output.v1"
+    },
+    "lane_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pass",
+        "hold",
+        "fail"
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "#/"
+      }
+    },
+    "findings": {
+      "type": "object",
+      "required": [
+        "fact",
+        "upstream_claim",
+        "independent_evidence",
+        "inference",
+        "unknown"
+      ],
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "findings_detail": {
+      "type": "object"
+    },
+    "forbidden_actions_observed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "contains": {
+        "type": "string",
+        "pattern": "(?i)no target repo code execution"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

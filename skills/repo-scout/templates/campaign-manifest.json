@@ -1,0 +1,28 @@
+{
+  "schema_version": "repo-scout.campaign.v1",
+  "campaign_id": "example-campaign",
+  "owner_issue": "none",
+  "mode": "standard",
+  "status": "initialized",
+  "created_at": "1970-01-01T00:00:00Z",
+  "updated_at": "1970-01-01T00:00:00Z",
+  "root": "/path/to/campaign",
+  "scout_controller": "controller",
+  "candidate_owner": "owner",
+  "verifier": "independent-qa",
+  "next_review_at": "1970-01-31T00:00:00Z",
+  "routing_surface": "repo-scout application",
+  "owner_gate": "none",
+  "max_concurrency": 3,
+  "partial_success_allowed": true,
+  "lock": {"owner": "controller", "pid": 0, "created_at": "1970-01-01T00:00:00Z", "expires_at": "1970-01-01T04:00:00Z"},
+  "baseline": {
+    "doctor_command": "repo-scout doctor",
+    "collector_command_shape": "repo-scout scout <url> --workspace <repo-root>/collector --out <repo-root>/collector/report --format both",
+    "runner": "no-exec"
+  },
+  "canonical_fields": ["decision", "consumption_mode", "build_gate", "collector_verdict"],
+  "repositories": [],
+  "checkpoints": [],
+  "hashes": {}
+}

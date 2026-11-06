@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://repo-scout.local/schemas/plan.v1.schema.json",
+  "title": "repo-scout ResearchPlan v1",
+  "type": "object",
+  "required": ["schema_version", "plan_id", "created_at", "repo", "runner_policy", "lanes", "analyzers"],
+  "properties": {
+    "schema_version": {"const": "repo-scout.plan.v1"},
+    "plan_id": {"type": "string"},
+    "created_at": {"type": "string"},
+    "repo": {"type": "object"},
+    "runner_policy": {"type": "object"},
+    "lanes": {"type": "array"},
+    "analyzers": {"type": "array"}
+  }
+}

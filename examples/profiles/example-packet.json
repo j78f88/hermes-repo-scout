@@ -1,0 +1,47 @@
+{
+  "schema_version": "repo-scout.profile.v1",
+  "id": "example-packet",
+  "name": "Example packet evidence profile",
+  "version": "2026-06-28",
+  "description": "Planning profile for sample packet outputs while preserving repo-scout core schema neutrality.",
+  "export_policy": {
+    "default_mode": "corpus_only",
+    "curated_modes": ["selected_repo_cards", "profile_packet", "pattern_candidates"],
+    "raw_export_mode": "debug_full_only",
+    "notes": "EXAMPLE-style packet output is a curated projection from repo-scout's corpus. Raw scan evidence and full repo artifacts stay in report storage rather than downstream summaries."
+  },
+  "packet_style": {
+    "project": "example-packet",
+    "types": ["operating-packet", "depth-pack", "council-synthesis"],
+    "evidence_card_labels": ["FACT", "BUYER", "ASSUMPTION", "ESTIMATE"]
+  },
+  "comparison_dimensions": [
+    {
+      "name": "packet_evidence_readiness",
+      "preference": "Evidence can be mapped into FACT/BUYER/ASSUMPTION/ESTIMATE cards without changing neutral core records"
+    },
+    {
+      "name": "spec_vs_market_verdict",
+      "preference": "Verdicts can be phrased for packet maturity, e.g. spec-complete, market-UNvalidated"
+    }
+  ],
+  "adapter_mapping": {
+    "target": "example-packet",
+    "evidence_labels": ["FACT", "BUYER", "ASSUMPTION", "ESTIMATE"],
+    "verdict_phrases": ["spec-complete, market-UNvalidated", "needs-red-team-refute", "market-validated", "adapter-ready"],
+    "notes": "Planning only: do not implement a publication adapter or mutate external systems. Map neutral Claim/Evidence/Finding/Verdict later."
+  },
+  "planning": {
+    "evidence_needs": ["profile_evidence_label_mapping", "packet_verdict_mapping", "source_index", "assumption_register"],
+    "analyzers": ["profile-fit", "docs-claims"],
+    "lanes": ["evidence_labelling", "profile_fit", "docs_claims"],
+    "output_route": ["corpus-record", "profile-packet", "selected_repo_card", "json", "markdown"],
+    "claim_targets": [
+      {
+        "id": "ct_example_mapping",
+        "target_type": "adapter_mapping",
+        "query": "Plan how repo-scout neutral evidence and verdicts would map to EXAMPLE packet labels and spec-vs-market verdict phrases."
+      }
+    ]
+  }
+}

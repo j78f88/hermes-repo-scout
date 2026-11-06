@@ -1,0 +1,50 @@
+{
+  "schema_version": "repo-scout.profile.v1",
+  "id": "agent-stack",
+  "name": "Scout agent orchestration stack",
+  "version": "2026-06-28",
+  "description": "Profile for evaluating repos against Scout/Hermes-style agent orchestration, evidence, and no-exec safety constraints.",
+  "export_policy": {
+    "default_mode": "corpus_only",
+    "curated_modes": ["rollups_only", "selected_repo_cards", "pattern_candidates"],
+    "raw_export_mode": "debug_full_only",
+    "notes": "Raw scan evidence, repo snapshots, scanner output, and probe artifacts remain in the repo-scout corpus/workspace. Downstream consumers receive curated exports only."
+  },
+  "stack": {
+    "languages": ["python", "typescript"],
+    "runtimes": ["cli", "agent-service"],
+    "constraints": ["static-first", "no untrusted target code execution by default", "evidence-backed reports"]
+  },
+  "comparison_dimensions": [
+    {
+      "name": "runtime",
+      "preference": "Python-first CLI with optional TypeScript services",
+      "notes": "Direct adoption is stronger when Python integration is available; TypeScript can still be useful for service or pattern borrowing."
+    },
+    {
+      "name": "agent_orchestration",
+      "preference": "Composable orchestration primitives, durable state, and explicit tool boundaries"
+    },
+    {
+      "name": "safety_model",
+      "preference": "No-exec/static analysis path and clear sandbox gates before running repo-defined commands"
+    },
+    {
+      "name": "evidence_artifacts",
+      "preference": "Traceable Claim/Evidence/Finding/Verdict records that downstream adapters can consume"
+    }
+  ],
+  "planning": {
+    "evidence_needs": ["profile_comparison", "architecture_inventory", "adapter_surface", "safety_policy_signals"],
+    "analyzers": ["profile-fit", "architecture-map", "static-risk"],
+    "lanes": ["profile_fit", "architecture_fit", "risk_maintenance"],
+    "output_route": ["corpus-record", "recommendation", "deep-dossier", "selected_repo_card"],
+    "claim_targets": [
+      {
+        "id": "ct_agent_stack_fit",
+        "target_type": "profile_fit",
+        "query": "Compare repo capabilities and constraints against the Scout agent orchestration stack profile."
+      }
+    ]
+  }
+}

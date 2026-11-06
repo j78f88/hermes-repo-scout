@@ -1,0 +1,120 @@
+{
+  "schema_version": "repo-scout-owner-corrections-fixtures-v1",
+  "fixtures": [
+    {
+      "correction_id": "correction_feedback-hello-world-no-fit-route",
+      "source_anchor": {
+        "source_type": "owner_correction",
+        "path_or_url": "reports/example-fit/repo-fit-blind-runs/octocat-hello-world/repo-fit-report.json",
+        "locator": "Synthetic blind-run review: hello-world should be no-fit/example-only, not a candidate route",
+        "captured_at": "2026-06-30T15:25:06+00:00"
+      },
+      "original_output_ref": "reports/example-fit/repo-fit-blind-runs/octocat-hello-world/repo-fit-report.json",
+      "owner_correction": "If a repo is only a toy/demo hello-world fixture, repo-scout must not route it to example-agent-platform, Hermes, or review-board just because it is runnable. The durable outcome is a no-fit/skip decision with an explicit no-op follow-up and a replay fixture.",
+      "durable_change_classes": [
+        "golden_fixture_addition",
+        "backlog_search_query_improvement",
+        "output_contract_change",
+        "source_anchor"
+      ],
+      "required_durable_artifacts": [
+        {
+          "class": "golden_fixture_addition",
+          "path_or_anchor": "tests/fixtures/correction_feedback/owner-corrections.json",
+          "status": "applied",
+          "verification": "repo-scout owner-correction-validate tests/fixtures/correction_feedback/owner-corrections.json exits 0"
+        },
+        {
+          "class": "backlog_search_query_improvement",
+          "path_or_anchor": "replay_case.assertion requires toy/demo/runnable-only terms to force skip/no-op rather than route/create_new_parent",
+          "status": "applied",
+          "verification": "test_correction_feedback_checked_in_correction_fixture_passes validates the replay assertion is persisted"
+        },
+        {
+          "class": "output_contract_change",
+          "path_or_anchor": "docs/OWNER_CORRECTION_FEEDBACK_LOOP.md",
+          "status": "applied",
+          "verification": "docs define correction capture fields, durable classes, replay gate, and non-memory persistence"
+        },
+        {
+          "class": "source_anchor",
+          "path_or_anchor": "Example correction / validation packet links and source_anchor path_or_url",
+          "status": "applied",
+          "verification": "fixture source_anchor and packet-root index link point to durable files instead of chat memory"
+        }
+      ],
+      "replay_case": {
+        "pre_correction_verdict": "route_or_pilot_due_to_runnable_surface",
+        "corrected_verdict": "skip_no_fit_no_op",
+        "assertion": "A toy/demo hello-world repo with no owner-system purpose match must remain skip/no-fit even if it has README quickstart or runnable metadata; searched terms must include hello-world, toy/demo, no-fit, repo-fit, and EXAMPLE-205 before any new work recommendation."
+      },
+      "non_memory_persistence": {
+        "chat_memory_required": false,
+        "persisted_paths": [
+          "tests/fixtures/correction_feedback/owner-corrections.json",
+          "tests/test_correction_feedback.py",
+          "docs/OWNER_CORRECTION_FEEDBACK_LOOP.md"
+        ]
+      },
+      "safety_boundaries": {
+        "target_repo_execution_allowed": false,
+        "tracker_mutation_allowed": false,
+        "upstream_source_retention_allowed": false
+      }
+    },
+    {
+      "correction_id": "correction_feedback-paperclipai-existing-lane-route",
+      "source_anchor": {
+        "source_type": "markdown_report",
+        "path_or_url": "reports/candidates/paperclipai-paperclip.md",
+        "locator": "candidate note and EXAMPLE-205 source-intelligence packet root",
+        "captured_at": "2026-06-30T15:25:06+00:00"
+      },
+      "original_output_ref": "source-intelligence candidate routing for paperclipai-paperclip",
+      "owner_correction": "When Owner has already curated a repo as a source-intelligence candidate, repo-scout should anchor to that candidate report and the existing source-intelligence lane instead of inventing a fresh tracker parent or relying on conversational recall.",
+      "durable_change_classes": [
+        "registry_update",
+        "backlog_search_query_improvement",
+        "source_anchor"
+      ],
+      "required_durable_artifacts": [
+        {
+          "class": "registry_update",
+          "path_or_anchor": "reports/registry/repo-purpose-registry.json entries[repo-scout].backlog_search_queries",
+          "status": "applied",
+          "verification": "registry JSON parses and contains Owner correction / no-fit / source-intelligence query anchors"
+        },
+        {
+          "class": "backlog_search_query_improvement",
+          "path_or_anchor": "repo-purpose-registry.json backlog_search_queries include Owner correction, correction replay, toy/demo, hello-world, no-fit, Paperclip, and source-intelligence candidate",
+          "status": "applied",
+          "verification": "python JSON readback asserts queries are present"
+        },
+        {
+          "class": "source_anchor",
+          "path_or_anchor": "docs/OWNER_CORRECTION_FEEDBACK_LOOP.md",
+          "status": "applied",
+          "verification": "README links the feedback-loop note"
+        }
+      ],
+      "replay_case": {
+        "pre_correction_verdict": "create_new_parent_from_repo_scout_chat_context",
+        "corrected_verdict": "route_to_existing_source_intelligence_candidate_lane",
+        "assertion": "A repo already represented in the packet root candidate notes must route to the saved source anchor and collision check before any Linear creation recommendation."
+      },
+      "non_memory_persistence": {
+        "chat_memory_required": false,
+        "persisted_paths": [
+          "tests/fixtures/correction_feedback/owner-corrections.json",
+          "reports/registry/repo-purpose-registry.json",
+          "docs/OWNER_CORRECTION_FEEDBACK_LOOP.md"
+        ]
+      },
+      "safety_boundaries": {
+        "target_repo_execution_allowed": false,
+        "tracker_mutation_allowed": false,
+        "upstream_source_retention_allowed": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,1174 @@
+{
+  "fixtures": [
+    {
+      "backlog_collision_check": {
+        "collision_classification": "no_collision",
+        "confidence": "high",
+        "gaps_or_unavailable_sources": [],
+        "matching_existing_items": [],
+        "recommended_action": "new_parent_only_after_no_collision",
+        "searched_sources": [
+          "issue tracker mirror",
+          "queue.jsonl",
+          "repo-purpose registry",
+          "project ledgers"
+        ],
+        "searched_terms": [
+          "agent-framework-candidate",
+          "repo-fit",
+          "source intelligence",
+          "EXAMPLE-205"
+        ],
+        "source_of_truth_owner": "Linear EXAMPLE-205 child sequence"
+      },
+      "confidence_and_unknowns": {
+        "confidence": "medium",
+        "unknowns": [
+          "fixture does not prove live source quality"
+        ]
+      },
+      "decision_surface": {
+        "decision": "pilot",
+        "owner_action_required": false,
+        "next_gate": "fixture validation only",
+        "one_sentence_why": "The fixture has a complete fit matrix, collision result, and boundary review.",
+        "recommendation": "pilot under the existing EXAMPLE-205 validation contract.",
+        "source_of_truth_owner": "repo-scout validation contract"
+      },
+      "fixture_class": "agent-framework-candidate",
+      "fixture_id": "agent-framework-candidate",
+      "follow_up": {
+        "action": "create_new_parent",
+        "binding_target": "EXAMPLE-205 child sequence",
+        "next_verification": "run repo-fit validation fixtures and read report",
+        "owner": "scout",
+        "why_this_action": "Follow-up is bound to the existing parent and not loose prose."
+      },
+      "implementation_boundary_review": {
+        "allowed_next_action": "local fixture/report only; no target repo execution or owning repo mutation",
+        "blocked_on_owner_decision_if_any": "none",
+        "boundary_verdict": "pass",
+        "required_revisions": [],
+        "violations": []
+      },
+      "non_goals_preserved": [
+        "no target repo execution",
+        "no upstream source copy/retention",
+        "no owning repo mutation from this validation fixture",
+        "no new tracker project creation"
+      ],
+      "repo_fit_matrix": [
+        {
+          "confidence": "medium",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "positive fit for example-agent-platform",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "yes",
+          "non_goals": [
+            "no target repo execution",
+            "no direct source consumption"
+          ],
+          "recommended_route_before_collision": "collision-check-first",
+          "registry_entry_name": "example-agent-platform",
+          "when": "Only after backlog collision and boundary review pass.",
+          "where": "example-agent-platform owning surface",
+          "why": "Fixture maps a bounded idea to example-agent-platform without source copying."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-media-sync",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-media-sync",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-media-sync purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for repo-scout",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "repo-scout",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match repo-scout purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "medium",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "positive fit for example-agent-install",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "maybe",
+          "non_goals": [
+            "no target repo execution",
+            "no direct source consumption"
+          ],
+          "recommended_route_before_collision": "collision-check-first",
+          "registry_entry_name": "example-agent-install",
+          "when": "Only after backlog collision and boundary review pass.",
+          "where": "example-agent-install owning surface",
+          "why": "Fixture maps a bounded idea to example-agent-install without source copying."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-ops-ui",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-ops-ui",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-ops-ui purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-review-board",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-review-board",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-review-board purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-operating-docs",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-operating-docs",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-operating-docs purpose, backlog anchors, or non-goals."
+        }
+      ],
+      "source_evidence_inspected": [
+        {
+          "captured_at": "2026-06-30T23:24:00+00:00",
+          "claim_supported": "source inspected as bounded fixture metadata only",
+          "locator": "fixture output",
+          "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+          "retention_status": "bounded_metadata_only",
+          "source_type": "generated_report",
+          "trust_level": "fixture"
+        }
+      ]
+    },
+    {
+      "backlog_collision_check": {
+        "collision_classification": "no_collision",
+        "confidence": "high",
+        "gaps_or_unavailable_sources": [],
+        "matching_existing_items": [],
+        "recommended_action": "new_parent_only_after_no_collision",
+        "searched_sources": [
+          "issue tracker mirror",
+          "queue.jsonl",
+          "repo-purpose registry",
+          "project ledgers"
+        ],
+        "searched_terms": [
+          "source-ingestion-corpus-candidate",
+          "repo-fit",
+          "source intelligence",
+          "EXAMPLE-205"
+        ],
+        "source_of_truth_owner": "Linear EXAMPLE-205 child sequence"
+      },
+      "confidence_and_unknowns": {
+        "confidence": "medium",
+        "unknowns": [
+          "fixture does not prove live source quality"
+        ]
+      },
+      "decision_surface": {
+        "decision": "route",
+        "owner_action_required": false,
+        "next_gate": "fixture validation only",
+        "one_sentence_why": "The fixture has a complete fit matrix, collision result, and boundary review.",
+        "recommendation": "route under the existing EXAMPLE-205 validation contract.",
+        "source_of_truth_owner": "repo-scout validation contract"
+      },
+      "fixture_class": "source-ingestion-corpus-candidate",
+      "fixture_id": "source-ingestion-corpus-candidate",
+      "follow_up": {
+        "action": "create_new_parent",
+        "binding_target": "EXAMPLE-205 child sequence",
+        "next_verification": "run repo-fit validation fixtures and read report",
+        "owner": "scout",
+        "why_this_action": "Follow-up is bound to the existing parent and not loose prose."
+      },
+      "implementation_boundary_review": {
+        "allowed_next_action": "local fixture/report only; no target repo execution or owning repo mutation",
+        "blocked_on_owner_decision_if_any": "none",
+        "boundary_verdict": "pass",
+        "required_revisions": [],
+        "violations": []
+      },
+      "non_goals_preserved": [
+        "no target repo execution",
+        "no upstream source copy/retention",
+        "no owning repo mutation from this validation fixture",
+        "no new tracker project creation"
+      ],
+      "repo_fit_matrix": [
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-agent-platform",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-agent-platform",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-agent-platform purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "medium",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "positive fit for example-media-sync",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "yes",
+          "non_goals": [
+            "no target repo execution",
+            "no direct source consumption"
+          ],
+          "recommended_route_before_collision": "collision-check-first",
+          "registry_entry_name": "example-media-sync",
+          "when": "Only after backlog collision and boundary review pass.",
+          "where": "example-media-sync owning surface",
+          "why": "Fixture maps a bounded idea to example-media-sync without source copying."
+        },
+        {
+          "confidence": "medium",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "positive fit for repo-scout",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "maybe",
+          "non_goals": [
+            "no target repo execution",
+            "no direct source consumption"
+          ],
+          "recommended_route_before_collision": "collision-check-first",
+          "registry_entry_name": "repo-scout",
+          "when": "Only after backlog collision and boundary review pass.",
+          "where": "repo-scout owning surface",
+          "why": "Fixture maps a bounded idea to repo-scout without source copying."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-agent-install",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-agent-install",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-agent-install purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-ops-ui",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-ops-ui",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-ops-ui purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-review-board",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-review-board",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-review-board purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-operating-docs",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-operating-docs",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-operating-docs purpose, backlog anchors, or non-goals."
+        }
+      ],
+      "source_evidence_inspected": [
+        {
+          "captured_at": "2026-06-30T23:24:00+00:00",
+          "claim_supported": "source inspected as bounded fixture metadata only",
+          "locator": "fixture output",
+          "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+          "retention_status": "bounded_metadata_only",
+          "source_type": "generated_report",
+          "trust_level": "fixture"
+        }
+      ]
+    },
+    {
+      "backlog_collision_check": {
+        "collision_classification": "no_collision",
+        "confidence": "high",
+        "gaps_or_unavailable_sources": [],
+        "matching_existing_items": [],
+        "recommended_action": "new_parent_only_after_no_collision",
+        "searched_sources": [
+          "issue tracker mirror",
+          "queue.jsonl",
+          "repo-purpose registry",
+          "project ledgers"
+        ],
+        "searched_terms": [
+          "repo-scout-self-improvement-candidate",
+          "repo-fit",
+          "source intelligence",
+          "EXAMPLE-205"
+        ],
+        "source_of_truth_owner": "Linear EXAMPLE-205 child sequence"
+      },
+      "confidence_and_unknowns": {
+        "confidence": "medium",
+        "unknowns": [
+          "fixture does not prove live source quality"
+        ]
+      },
+      "decision_surface": {
+        "decision": "adopt",
+        "owner_action_required": false,
+        "next_gate": "fixture validation only",
+        "one_sentence_why": "The fixture has a complete fit matrix, collision result, and boundary review.",
+        "recommendation": "adopt under the existing EXAMPLE-205 validation contract.",
+        "source_of_truth_owner": "repo-scout validation contract"
+      },
+      "fixture_class": "repo-scout-self-improvement-candidate",
+      "fixture_id": "repo-scout-self-improvement-candidate",
+      "follow_up": {
+        "action": "create_new_parent",
+        "binding_target": "EXAMPLE-205 child sequence",
+        "next_verification": "run repo-fit validation fixtures and read report",
+        "owner": "scout",
+        "why_this_action": "Follow-up is bound to the existing parent and not loose prose."
+      },
+      "implementation_boundary_review": {
+        "allowed_next_action": "local fixture/report only; no target repo execution or owning repo mutation",
+        "blocked_on_owner_decision_if_any": "none",
+        "boundary_verdict": "pass",
+        "required_revisions": [],
+        "violations": []
+      },
+      "non_goals_preserved": [
+        "no target repo execution",
+        "no upstream source copy/retention",
+        "no owning repo mutation from this validation fixture",
+        "no new tracker project creation"
+      ],
+      "repo_fit_matrix": [
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-agent-platform",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-agent-platform",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-agent-platform purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-media-sync",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-media-sync",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-media-sync purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "medium",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "positive fit for repo-scout",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "yes",
+          "non_goals": [
+            "no target repo execution",
+            "no direct source consumption"
+          ],
+          "recommended_route_before_collision": "collision-check-first",
+          "registry_entry_name": "repo-scout",
+          "when": "Only after backlog collision and boundary review pass.",
+          "where": "repo-scout owning surface",
+          "why": "Fixture maps a bounded idea to repo-scout without source copying."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-agent-install",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-agent-install",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-agent-install purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-ops-ui",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-ops-ui",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-ops-ui purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-review-board",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-review-board",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-review-board purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "medium",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "positive fit for example-operating-docs",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "maybe",
+          "non_goals": [
+            "no target repo execution",
+            "no direct source consumption"
+          ],
+          "recommended_route_before_collision": "collision-check-first",
+          "registry_entry_name": "example-operating-docs",
+          "when": "Only after backlog collision and boundary review pass.",
+          "where": "example-operating-docs owning surface",
+          "why": "Fixture maps a bounded idea to example-operating-docs without source copying."
+        }
+      ],
+      "source_evidence_inspected": [
+        {
+          "captured_at": "2026-06-30T23:24:00+00:00",
+          "claim_supported": "source inspected as bounded fixture metadata only",
+          "locator": "fixture output",
+          "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+          "retention_status": "bounded_metadata_only",
+          "source_type": "generated_report",
+          "trust_level": "fixture"
+        }
+      ]
+    },
+    {
+      "backlog_collision_check": {
+        "collision_classification": "no_collision",
+        "confidence": "high",
+        "gaps_or_unavailable_sources": [],
+        "matching_existing_items": [],
+        "recommended_action": "no_op",
+        "searched_sources": [
+          "issue tracker mirror",
+          "queue.jsonl",
+          "repo-purpose registry",
+          "project ledgers"
+        ],
+        "searched_terms": [
+          "no-fit-watch-or-skip-candidate",
+          "repo-fit",
+          "source intelligence",
+          "EXAMPLE-205"
+        ],
+        "source_of_truth_owner": "Linear EXAMPLE-205 child sequence"
+      },
+      "confidence_and_unknowns": {
+        "confidence": "medium",
+        "unknowns": [
+          "fixture does not prove live source quality"
+        ]
+      },
+      "decision_surface": {
+        "decision": "skip",
+        "owner_action_required": false,
+        "next_gate": "fixture validation only",
+        "one_sentence_why": "The fixture has a complete fit matrix, collision result, and boundary review.",
+        "recommendation": "skip under the existing EXAMPLE-205 validation contract.",
+        "source_of_truth_owner": "none/no action"
+      },
+      "fixture_class": "no-fit-watch-or-skip-candidate",
+      "fixture_id": "no-fit-watch-or-skip-candidate",
+      "follow_up": {
+        "action": "none",
+        "binding_target": "EXAMPLE-205 child sequence",
+        "next_verification": "run repo-fit validation fixtures and read report",
+        "owner": "scout",
+        "why_this_action": "Follow-up is bound to the existing parent and not loose prose."
+      },
+      "implementation_boundary_review": {
+        "allowed_next_action": "local fixture/report only; no target repo execution or owning repo mutation",
+        "blocked_on_owner_decision_if_any": "none",
+        "boundary_verdict": "pass",
+        "required_revisions": [],
+        "violations": []
+      },
+      "non_goals_preserved": [
+        "no target repo execution",
+        "no upstream source copy/retention",
+        "no owning repo mutation from this validation fixture",
+        "no new tracker project creation"
+      ],
+      "repo_fit_matrix": [
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-agent-platform",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-agent-platform",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-agent-platform purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-media-sync",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-media-sync",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-media-sync purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for repo-scout",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "repo-scout",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match repo-scout purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-agent-install",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-agent-install",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-agent-install purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-ops-ui",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-ops-ui",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-ops-ui purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-review-board",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-review-board",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-review-board purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-operating-docs",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-operating-docs",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-operating-docs purpose, backlog anchors, or non-goals."
+        }
+      ],
+      "source_evidence_inspected": [
+        {
+          "captured_at": "2026-06-30T23:24:00+00:00",
+          "claim_supported": "source inspected as bounded fixture metadata only",
+          "locator": "fixture output",
+          "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+          "retention_status": "bounded_metadata_only",
+          "source_type": "generated_report",
+          "trust_level": "fixture"
+        }
+      ]
+    },
+    {
+      "backlog_collision_check": {
+        "collision_classification": "planned_existing_child",
+        "confidence": "high",
+        "gaps_or_unavailable_sources": [],
+        "matching_existing_items": [
+          "EXAMPLE-205",
+          "EXAMPLE-209"
+        ],
+        "recommended_action": "update_existing_issue",
+        "searched_sources": [
+          "issue tracker mirror",
+          "queue.jsonl",
+          "repo-purpose registry",
+          "project ledgers"
+        ],
+        "searched_terms": [
+          "duplicate-planned-function-candidate",
+          "repo-fit",
+          "source intelligence",
+          "EXAMPLE-205"
+        ],
+        "source_of_truth_owner": "Linear EXAMPLE-205 child sequence"
+      },
+      "confidence_and_unknowns": {
+        "confidence": "medium",
+        "unknowns": [
+          "fixture does not prove live source quality"
+        ]
+      },
+      "decision_surface": {
+        "decision": "route",
+        "owner_action_required": false,
+        "next_gate": "fixture validation only",
+        "one_sentence_why": "The fixture has a complete fit matrix, collision result, and boundary review.",
+        "recommendation": "route under the existing EXAMPLE-205 validation contract.",
+        "source_of_truth_owner": "repo-scout validation contract"
+      },
+      "fixture_class": "duplicate-planned-function-candidate",
+      "fixture_id": "duplicate-planned-function-candidate",
+      "follow_up": {
+        "action": "tracker_update",
+        "binding_target": "EXAMPLE-205 child sequence",
+        "next_verification": "run repo-fit validation fixtures and read report",
+        "owner": "scout",
+        "why_this_action": "Follow-up is bound to the existing parent and not loose prose."
+      },
+      "implementation_boundary_review": {
+        "allowed_next_action": "local fixture/report only; no target repo execution or owning repo mutation",
+        "blocked_on_owner_decision_if_any": "none",
+        "boundary_verdict": "pass",
+        "required_revisions": [],
+        "violations": []
+      },
+      "non_goals_preserved": [
+        "no target repo execution",
+        "no upstream source copy/retention",
+        "no owning repo mutation from this validation fixture",
+        "no new tracker project creation"
+      ],
+      "repo_fit_matrix": [
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-agent-platform",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-agent-platform",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-agent-platform purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-media-sync",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-media-sync",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-media-sync purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for repo-scout",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "repo-scout",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match repo-scout purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-agent-install",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-agent-install",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-agent-install purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-ops-ui",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-ops-ui",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-ops-ui purpose, backlog anchors, or non-goals."
+        },
+        {
+          "confidence": "medium",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "positive fit for example-review-board",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "maybe",
+          "non_goals": [
+            "no target repo execution",
+            "no direct source consumption"
+          ],
+          "recommended_route_before_collision": "collision-check-first",
+          "registry_entry_name": "example-review-board",
+          "when": "Only after backlog collision and boundary review pass.",
+          "where": "example-review-board owning surface",
+          "why": "Fixture maps a bounded idea to example-review-board without source copying."
+        },
+        {
+          "confidence": "high",
+          "evidence_refs": [
+            {
+              "captured_at": "2026-06-30T23:24:00+00:00",
+              "claim_supported": "no fit for example-operating-docs",
+              "locator": "fixture output",
+              "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+              "retention_status": "bounded_metadata_only",
+              "source_type": "generated_report",
+              "trust_level": "fixture"
+            }
+          ],
+          "fit_verdict": "no",
+          "non_goals": [
+            "do not invent work for non-fit systems"
+          ],
+          "recommended_route_before_collision": "none",
+          "registry_entry_name": "example-operating-docs",
+          "when": "not_applicable",
+          "where": "not_applicable",
+          "why": "No current route: fixture does not match example-operating-docs purpose, backlog anchors, or non-goals."
+        }
+      ],
+      "source_evidence_inspected": [
+        {
+          "captured_at": "2026-06-30T23:24:00+00:00",
+          "claim_supported": "source inspected as bounded fixture metadata only",
+          "locator": "fixture output",
+          "path_or_url": "fixture://EXAMPLE-209/golden-contract",
+          "retention_status": "bounded_metadata_only",
+          "source_type": "generated_report",
+          "trust_level": "fixture"
+        }
+      ]
+    }
+  ]
+}

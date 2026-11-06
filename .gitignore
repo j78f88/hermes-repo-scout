@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+reports/
+.repo-scout/
+/tmp/
+.DS_Store
+campaign_*/
+uv.lock
+.release-checks/
+dist/
+build/
+*.pyc
