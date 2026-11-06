@@ -64,7 +64,7 @@ def _fallback_checkers():
             self.verdict = verdict
             self.findings = findings
 
-    def _scan_skill(skill_dir: Path):
+    def _scan_skill(skill_dir: Path, source: str = "community"):
         findings = []
         md = skill_dir / "SKILL.md"
         if md.is_file():
@@ -95,12 +95,16 @@ def _fallback_checkers():
                         out.append(_Finding("dynamic_code_or_import", "high", getattr(node, "lineno", 1), f"{rel}: {fn_name}", pattern_id=f"ast.{fn_name}", file=rel))
         return out
 
-    def _lint_skill(skill_dir: Path):
-        md = skill_dir / "SKILL.md"
+    class _LintIssue:
+        def __init__(self, rule: str, message: str):
+            self.rule = rule
+            self.message = message
+
+    def _lint_skill(md: Path):
         issues = []
         if not md.is_file() or not md.read_text(encoding="utf-8", errors="replace").startswith("---"):
-            issues.append({"severity": "error", "code": "missing_frontmatter", "message": "SKILL.md missing frontmatter"})
-        return issues, {}
+            issues.append(_LintIssue("missing_frontmatter", "SKILL.md missing frontmatter"))
+        return issues
 
     return _scan_skill, _ast_scan_path, _lint_skill
 

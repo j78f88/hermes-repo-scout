@@ -1,9 +1,9 @@
 {
   "schema_version": "repo-scout.profile.v1",
   "id": "agent-stack",
-  "name": "Scout agent orchestration stack",
+  "name": "Example agent orchestration stack",
   "version": "2026-06-28",
-  "description": "Profile for evaluating repos against Scout/Hermes-style agent orchestration, evidence, and no-exec safety constraints.",
+  "description": "Profile for evaluating repos against Hermes-style agent orchestration, evidence, and no-exec safety constraints.",
   "export_policy": {
     "default_mode": "corpus_only",
     "curated_modes": ["rollups_only", "selected_repo_cards", "pattern_candidates"],
@@ -43,7 +43,7 @@
       {
         "id": "ct_agent_stack_fit",
         "target_type": "profile_fit",
-        "query": "Compare repo capabilities and constraints against the Scout agent orchestration stack profile."
+        "query": "Compare repo capabilities and constraints against the Example agent orchestration stack profile."
       }
     ]
   }

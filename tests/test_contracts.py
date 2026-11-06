@@ -59,7 +59,7 @@ def test_contracts_core_contracts_reject_project_and_local_path_leaks():
     with pytest.raises(ValidationError):
         IdeaCard(id="ICX", purpose="Hermes-specific adapter", function="Neutral function")
     with pytest.raises(ValidationError):
-        Dossier(repo_purpose="Neutral", repo_function="Uses /" + "home/user/private config")
+        Dossier(repo_purpose="Neutral", repo_function="Uses /home/example/private config")
 
 
 def test_contracts_blind_goal_report_includes_dossier_and_idea_cards(fixture_repo, tmp_path):

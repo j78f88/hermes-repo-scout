@@ -100,7 +100,7 @@
       "replay_case": {
         "pre_correction_verdict": "create_new_parent_from_repo_scout_chat_context",
         "corrected_verdict": "route_to_existing_source_intelligence_candidate_lane",
-        "assertion": "A repo already represented in the packet root candidate notes must route to the saved source anchor and collision check before any Linear creation recommendation."
+        "assertion": "A repo already represented in the packet root candidate notes must route to the saved source anchor and collision check before any tracker creation recommendation."
       },
       "non_memory_persistence": {
         "chat_memory_required": false,

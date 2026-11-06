@@ -83,7 +83,7 @@ def _base_fixture(
             "matching_existing_items": matching_items if matching_items is not None else [],
             "collision_classification": collision_classification,
             "recommended_action": collision_action,
-            "source_of_truth_owner": "Linear EXAMPLE-205 child sequence",
+            "source_of_truth_owner": "issue tracker ISSUE-205 child sequence",
             "confidence": "high",
             "gaps_or_unavailable_sources": [],
         },

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://repo-scout.local/schemas/report.v1.schema.json",
+  "$id": "https://example.com/repo-scout/schemas/report.v1.schema.json",
   "title": "repo-scout Report v1",
   "type": "object",
   "required": ["schema_version", "run_id", "created_at", "generated_by", "status", "repo", "goal", "summary", "verdict", "claims", "evidence", "findings", "limitations"],

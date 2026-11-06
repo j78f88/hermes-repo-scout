@@ -1,6 +1,6 @@
 # Artifact-quality gate operator runsheet
 
-The artifact-quality gate is a deterministic repo-scout check for low-information Markdown artifacts before they are promoted into repo-scout, council, or Scout review flows. It is a guardrail for the source-intelligence -> controlled capability-consumption loop: artifacts should carry local evidence, reader value, validation status, stop conditions, and source-safety boundaries before Owner sees them.
+The artifact-quality gate is a deterministic repo-scout check for low-information Markdown artifacts before they are promoted into repo-scout, council, or Scout review flows. It is a guardrail for the controlled capability-consumption workflow: artifacts should carry local evidence, reader value, validation status, stop conditions, and source-safety boundaries before Owner sees them.
 
 ## Who uses it and when
 

@@ -12,7 +12,7 @@
   },
   "packet_style": {
     "project": "example-packet",
-    "types": ["operating-packet", "depth-pack", "council-synthesis"],
+    "types": ["operating-packet", "depth-pack", "review-synthesis"],
     "evidence_card_labels": ["FACT", "BUYER", "ASSUMPTION", "ESTIMATE"]
   },
   "comparison_dimensions": [

@@ -274,7 +274,7 @@ Keep the core workflow stable but adapt lanes to the repository type. See `refer
 
 Keep machine artifacts and any optional `synthesis/summary.md` inside the campaign root. A reader summary must cite the same saved evidence as the primary synthesis and is subject to the same C1 validation. Finalization does not publish to external systems; any external publication requires separate approval.
 
-Do not automatically create tracker work. If the owner accepts consumption, hand off through the source-intelligence capability-consumption loop: original implementation, explicit no-copy boundary, tests, runbook, benefit review, and a real owner.
+Do not automatically create tracker work. If the owner accepts consumption, hand off through the controlled capability-consumption workflow: original implementation, explicit no-copy boundary, tests, runbook, benefit review, and a real owner.
 
 ## Final Response Contract
 

@@ -66,7 +66,7 @@ def test_run_ledger_model_rejects_source_contamination_terms():
             id="bad-001",
             kind="memo",
             title="bad",
-            summary="This leaks github.com/owner/repo and /" + "home/example paths.",
+            summary="This leaks github.com/owner/repo and /home/example paths.",
         )
 
 

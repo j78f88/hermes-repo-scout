@@ -19,7 +19,7 @@
           "source intelligence",
           "EXAMPLE-205"
         ],
-        "source_of_truth_owner": "Linear EXAMPLE-205 child sequence"
+        "source_of_truth_owner": "issue tracker ISSUE-205 child sequence"
       },
       "confidence_and_unknowns": {
         "confidence": "medium",
@@ -253,7 +253,7 @@
           "source intelligence",
           "EXAMPLE-205"
         ],
-        "source_of_truth_owner": "Linear EXAMPLE-205 child sequence"
+        "source_of_truth_owner": "issue tracker ISSUE-205 child sequence"
       },
       "confidence_and_unknowns": {
         "confidence": "medium",
@@ -487,7 +487,7 @@
           "source intelligence",
           "EXAMPLE-205"
         ],
-        "source_of_truth_owner": "Linear EXAMPLE-205 child sequence"
+        "source_of_truth_owner": "issue tracker ISSUE-205 child sequence"
       },
       "confidence_and_unknowns": {
         "confidence": "medium",
@@ -721,7 +721,7 @@
           "source intelligence",
           "EXAMPLE-205"
         ],
-        "source_of_truth_owner": "Linear EXAMPLE-205 child sequence"
+        "source_of_truth_owner": "issue tracker ISSUE-205 child sequence"
       },
       "confidence_and_unknowns": {
         "confidence": "medium",
@@ -956,7 +956,7 @@
           "source intelligence",
           "EXAMPLE-205"
         ],
-        "source_of_truth_owner": "Linear EXAMPLE-205 child sequence"
+        "source_of_truth_owner": "issue tracker ISSUE-205 child sequence"
       },
       "confidence_and_unknowns": {
         "confidence": "medium",

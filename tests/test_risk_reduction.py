@@ -18,7 +18,7 @@ def _make_idea_remote(tmp_path):
         encoding="utf-8",
     )
     subprocess.run(["git", "init", "--initial-branch=main"], cwd=src, check=True, capture_output=True, text=True)
-    subprocess.run(["git", "config", "user.email", "test@example.com"], cwd=src, check=True)
+    subprocess.run(["git", "config", "user.email", "test@repo-scout.test.invalid"], cwd=src, check=True)
     subprocess.run(["git", "config", "user.name", "Test"], cwd=src, check=True)
     subprocess.run(["git", "add", "."], cwd=src, check=True)
     subprocess.run(["git", "commit", "-m", "fixture"], cwd=src, check=True, capture_output=True, text=True)

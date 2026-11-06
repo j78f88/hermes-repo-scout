@@ -31,7 +31,7 @@ def test_quality_blind_run_quality_summary_is_stable(tmp_path):
 
 
 def test_retention_check_ignores_benchmark_workspace_paths():
-    root_prefix = "/" + "home/someone/.cache/scratch/tmpabc"
+    root_prefix = "/home/example/.cache/scratch/tmpabc"
     serialized = f'{{"path": "{root_prefix}/EveryInc/README.md"}}'
     assert retains_source(serialized, scrub_roots=[]) is True
     assert retains_source(serialized, scrub_roots=[root_prefix]) is False
